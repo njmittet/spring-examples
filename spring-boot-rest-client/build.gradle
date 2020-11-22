@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id "org.springframework.boot" version "2.4.0"
+    id "io.spring.dependency-management" version "1.0.10.RELEASE"
+}
+
+repositories {
+    jcenter()
+}
+
+java.sourceCompatibility = JavaVersion.VERSION_11
+
+ext {
+    guavaVersion = '30.0-jre'
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("com.fasterxml.jackson.core:jackson-databind")
+    implementation "com.google.guava:guava:$guavaVersion"
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
