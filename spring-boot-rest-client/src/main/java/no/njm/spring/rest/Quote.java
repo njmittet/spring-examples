@@ -6,7 +6,7 @@ import com.google.common.base.MoreObjects;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Quote {
 
-    static final String QUOTE_URL = "https://gturnquist-quoters.cfapps.io/api/random";
+    static final String QUOTE_URL = "https://quoters.apps.pcfone.io/api/random";
 
     private String type;
     private Value value;
